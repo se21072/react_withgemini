@@ -1,0 +1,172 @@
+/* frontend/src/App.css */
+
+/* 基本的なリセットと全体設定 */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* padding と border を含めて幅と高さを計算 */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  /* 全体の背景色 */
+  color: #333;
+}
+
+/* App コンポーネントのスタイル */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 垂直方向の中央寄せ */
+  align-items: center;
+  /* 水平方向の中央寄せ */
+  min-height: 100vh;
+  /* ビューポートの高さ全体を占める */
+  width: 100vw;
+  /* ビューポートの幅全体を占める */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* フォームのスタイル（ログインページ用） */
+.App form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  /* フォームの最大幅 */
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #007bff;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 20px);
+  /* padding 分を差し引く */
+  padding: 12px 10px;
+  border: 1px solid #ccd0d5;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+  width: 100%;
+  /* ボタンも幅100% */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.message {
+  margin-top: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #e6f7ff;
+  color: #004085;
+  font-weight: bold;
+  border: 1px solid #b3e6ff;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* ロール別ページのスタイル */
+.role-page {
+  display: flex;
+  /* Flexbox を使用 */
+  flex-direction: column;
+  /* 垂直方向に要素を並べる */
+  justify-content: center;
+  /* 垂直方向の中央寄せ */
+  align-items: center;
+  /* 水平方向の中央寄せ */
+  width: 100vw;
+  /* ビューポートの幅全体 */
+  min-height: 100vh;
+  /* ビューポートの高さ全体 */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f8f9fa;
+  /* ロールページの背景色 */
+  color: #212529;
+}
+
+.role-page h2 {
+  color: #007bff;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.role-page p {
+  font-size: 1.5em;
+  color: #495057;
+  margin-bottom: 30px;
+}
+
+/* ログアウトボタンのスタイル */
+button {
+  /* 全てのボタンに適用される基本スタイル（ログインボタン以外） */
+  background-color: #6c757d;
+  /* グレー系 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #5a6268;
+}
